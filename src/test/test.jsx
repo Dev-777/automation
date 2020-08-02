@@ -6,6 +6,7 @@ $(function () {
     var response = JSON.parse(xhr.responseText);
     setGeoData(response.city, response.country, response.code);
   }
+
   function setGeoData(city, country, countryCode) {
     $(".user-city").text(city);
     $(".country").text(country);
@@ -16,6 +17,7 @@ $(function () {
       .setAttribute("data-prod", "Potencialex");
     setCountryPrice(countryCode);
   }
+
   function setCountryPrice(geoCountry) {
     if (typeof country == "undefined") {
       country = geoCountry;
@@ -56,9 +58,9 @@ $(function () {
       kg_selected = "";
     }
     selects = $("select[name='country']");
-    selects.append('<option value="RU">Россия</option>');
-    selects.append('<option value="KZ" ' + kz_selected + ">Казахстан</option>");
-    selects.append('<option value="UA" ' + ua_selected + ">Украина</option>");
+    // selects.append('<option value="RU">Россия</option>');
+    // selects.append('<option value="KZ" ' + kz_selected + ">Казахстан</option>");
+    // selects.append('<option value="UA" ' + ua_selected + ">Украина</option>");
     // selects.append('<option value="BY" ' + by_selected + '>Белоруссия</option>');
     // selects.append('<option value="GE" ' + ge_selected + '>Грузия</option>');
     // selects.append('<option value="AM" ' + am_selected + '>Армения</option>');

@@ -1,5 +1,6 @@
 import React from "react";
-import { Price } from "../components/price/price";
+import { Price } from "../components/price/Price";
+import "../assets/css/app.css";
 
 function App() {
   return (
